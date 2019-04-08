@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>fresh_E-commerce-webapp</artifactId>
+    <packaging>war</packaging>
 
 
     <name>fresh_E-commerce-webapp Maven Webapp</name>
@@ -70,7 +71,20 @@
 
     <build>
         <plugins>
-
+            <!--tomcat服务器-->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <!-- 这里配置端口号和访问路径 -->
+                    <path>/ssm_eshop02</path>
+                    <port>9999</port>
+                    <uriEncoding>UTF-8</uriEncoding>
+                    <username>admin1</username>
+                    <password>123123</password>
+                </configuration>
+            </plugin>
             <!--最终利用maven打包的时候，需要把lib/*.jar都加入到war包中-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
