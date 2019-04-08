@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--不使用列标签别名-->
+        <setting name="useColumnLabel" value="false"/>
+
+        <!--驼峰命名-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+        <!--不使用自增长-->
+        <setting name="useGeneratedKeys" value="false"/>
+        <!--4.支持log4j2-->
+        <!-- <setting name="logImpl" value="LOG4J2"/> -->
+    </settings>
+    <typeAliases>
+        <package name="com.senchen365.eshop.po"/>
+    </typeAliases>
+</configuration>

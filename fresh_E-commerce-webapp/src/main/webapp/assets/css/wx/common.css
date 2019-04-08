@@ -1,0 +1,108 @@
+
+.space{height:10px; clear: both; display: block;}
+.no-info{color:#ADADAD; text-align: center; width: 100%; height: 40px; line-height: 40px;}
+
+/*新闻LIST*/
+.newsList{height:90px; overflow: hidden; border-bottom: 1px dashed #d2d2d2; padding:5px;}
+.newsList .coverImg{width:70px; height:65px; border:1px solid #d9d9d9; padding: 1px;}
+.newsList .coverImg img{width:68px; height:63px;}
+.newsList .title{height:25px; overflow: hidden;}
+.newsList .title a{font-size:16px; font-weight: bold; color:#8e8e8e;}
+.newsList .desc{color:#a0a0a0; font-size:14px; height:40px; overflow: hidden;}
+.newsList .see{line-height: 100px;}
+
+/*新闻DETAIL*/
+.newsDetail{font-size:12px; padding:10px; overflow: hidden; margin-bottom: 60px; }
+.newsDetail .title{font-size:16px; font-weight: bold; text-align: center; height: 40px; line-height: 40px; color: #666666;}
+.newsDetail .desc{color: #999999; height: 30px; line-height: 30px; border-bottom: 1px dashed #d6d6d6;}
+.newsDetail .content{padding-top:10px; color:#666666; line-height: 25px; font-size:14px;}
+/*.newsDetail .content p{text-indent: 25px;}*/
+.newsDetail .content img{width:100%; margin:10px 0;}
+.newsDetail .audio-con{width:100%; }
+
+
+/*理财产品LIST*/
+.weui-no-gutter{overflow: hidden; border: 0px solid #f00;}
+.weui-no-gutter .weui-col-50{
+    height:230px; overflow: hidden; font-size:12px; padding:10px; border-right: 1px dashed #ccc; border-bottom: 1px dashed #ccc;
+    position:relative;
+}
+.weui-no-gutter .col_r_n{border-right: 0;}
+.weui-no-gutter .weui-col-50 .coverImg{width:100%; height:160px;}
+.weui-no-gutter .weui-col-50 .title{text-align: left; height:25px; line-height: 25px; overflow:hidden; font-weight:bold; font-size:14px; color:#4C4C4C; }
+.weui-no-gutter .weui-col-50 .desc{height:80px; overflow:hidden; line-height: 25px; color:#494949;}
+.weui-no-gutter .weui-col-50 .realPrice{
+    color: #b51d1a;
+    font-size: 16px;
+    font-weight: bold;
+    height:20px;
+    line-height:20px;
+    text-align: left;
+    display: inline-block;
+}
+.weui-no-gutter .weui-col-50 .price{
+    color: #cccccc;
+    font-size: 12px;
+    height:20px;
+    line-height:20px;
+    text-align: left;
+    display: inline-block;
+    text-decoration: line-through;
+}
+.weui-no-gutter .weui-col-50 .income{
+    width:50px; height:45px; color:#ffffff; background: url("/assets/img/pc/i_label.png") 0 0 no-repeat; overflow: hidden;
+    position:absolute; top:0px; left:77%; z-index:10; display: inline-block; padding:5px 0 0 5px; text-align: center;
+}
+.weui-no-gutter .weui-col-50 .income .num{}
+
+/*顶部菜单*/
+.top-comm{position: fixed;}
+.top-comm a{padding:0}
+
+
+
+/*底部菜单*/
+.weui_tabbar{padding-bottom: 10px; position:fixed; z-index: 100; text-align: center;}
+.weui_tabbar .cur{color:#bc4729;}
+.weui_tabbar_label {font-size:14px;}
+
+/*内容区底部最后数据不被覆盖*/
+.weui_navbar{z-index:100;}
+.weui_navbar+.weui_tab_bd{padding-bottom:70px;}
+
+/*公用分页*/
+.pager{width:100%; text-align:center; padding:20px 0;}
+.pager .pager_btns a{margin-right:10px;} 
+
+
+/*商品详情*/
+.proDetail{}
+.proDetail .coverImg{width:100%; height:235px;}
+.proDetail .title{text-align: left; height:25px; line-height: 25px; overflow:hidden; font-weight:bold; font-size:14px; color:#4C4C4C; }
+.proDetail .desc{height:80px; overflow:hidden; line-height: 25px; color:#494949;}
+.proDetail .realPrice{
+    color: #b51d1a;
+    font-size: 16px;
+    font-weight: bold;
+    height:20px;
+    line-height:20px;
+    text-align: left;
+    display: inline-block;
+}
+.proDetail .price{
+    color: #cccccc;
+    font-size: 12px;
+    height:20px;
+    line-height:20px;
+    text-align: left;
+    display: inline-block;
+    text-decoration: line-through;
+}
+.proDetail .content{text-align: justify; margin-top: 10px;}
+.proDetail .content img{width:100%; margin-bottom:-10px; }
+
+/*提示购买*/
+.buyInfo{height: auto; overflow: hidden; line-height: 30px;}
+.buyInfo .appDown{padding:3px 10px; color:#ffffff; background-color: #0bb20c; }
+.buyInfo .webUrl{color:#2aabd2; }
+

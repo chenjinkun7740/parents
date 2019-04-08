@@ -1,0 +1,39 @@
+
+
+.green-bg{
+    /*background-color:#739840 !important;*/
+    padding:50px 0;
+}
+
+.regisiter-con{
+    background-color: #ffffff !important;
+    padding: 20px !important;
+    width: 380px !important;
+}
+
+.form-group{
+    margin-bottom: 0 !important;
+}
+
+.regisiter-wrap{margin-top:30px; margin-bottom: 30px; margin-left: 40px;}
+.title{
+    padding:10px 0 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #3c3c3c;
+}
+.tab-hd{margin-bottom: 40px;}
+.tab-hd>span{display: inline-block; position: relative;  padding:12px 57px; cursor: pointer; background-color: #ddd; color: #333}
+.tab-hd>span>i{display: none;}
+.tab-hd>span:first-child{margin-left:15px;}
+.tab-hd>span:hover,.tab-hd>span.active{background-color: #5cb85c; color: #fff; }
+.tab-hd>span:hover>i, .tab-hd>span.active>i{display:block; position: absolute; top:43px; left:80px; color:#5cb85c;}
+.regisiter-bg{background: url("css/images/regisit-bg.png") right center no-repeat;}
+.input-group {margin-bottom:25px !important;}
+.input-lg{font-size:14px;}
+.btn-lg, .btn-group-lg > .btn{font-size:16px;}
+
+.errorTip{height:35px; line-height: 35px; color:#ff0000; padding-left:15px;}
+
+
+

@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta charset="utf-8" />
+<title>品农商城-管理</title>
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta name="keywords" content="通州酒水,通州生鲜,通州水果,通州蔬菜,通州肉,通州蛋,通州促销活动,通州促销产品,北京通糖烟酒糖业有限公司,北京通州区超市"/>
+<meta http-equiv="description" content="北京通州酒水,北京通州生鲜,北京通州促销产品等,北京通州区超市连锁,北京通州区免费送货,北京通州区正品低价、品质保障、配送及时、轻松购物,北京通州品农,北京通州品质"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<base href="file:///D:/HTML/management/">
+<link rel="stylesheet" href="assets/lib/css/bootstrap.min.css" media="screen"/>
+<link rel="stylesheet" href="assets/lib/css/font-awesome.min.css" />
+<link rel="stylesheet" href="assets/lib/css/metrize.css" />
+<link rel="stylesheet" href="assets/lib/css/animate.css" />
+<link rel="stylesheet" href="assets/lib/css/toastr.min.css" />
+<link rel="stylesheet" href="assets/lib/css/bootstrap-datetimepicker.min.css" />
+<link rel="stylesheet" href="assets/lib/css/chosen.min.css" />
+<link rel="stylesheet" href="assets/lib/css/main.css" />
+<link rel="stylesheet" href="assets/lib/css/slidebars.css" />
+<link rel="stylesheet" href="assets/app/css/management/application.css" />
+<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media \ -->
+<!--[if lt IE 9]>
+<script src="assets/lib/js/html5shiv.min.js"></script>
+<script src="assets/lib/js/respond.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="/assets/app/css/management/storehouss.css" />
+
+</head>
+<body>
+<!-- Left sidebar start -->
+<aside id="sidebar">
+	<!-- Logo starts -->
+	<a href="admin/home/index.html" class="logo">
+		<img alt="" src="assets/app/images/management/admin_logo.png" style="margin-bottom: 10px;"/>
+		<p class="label">新鲜e客管理平台</p>
+	</a>
+	<!-- Logo ends -->
+	<!-- Menu start -->
+	<div id="menu">
+		<ul>
+			<li>
+				<a href="admin/home/index.html">
+					<div class="fs1 icon-user" aria-hidden="true"></div>
+					<span>个人中心</span>
+				</a>
+			</li>
+					<li class="has-sub">
+						<a href="#">
+							<div class="fs1" aria-hidden="true" data-icon=""></div>
+							<span>机构管理</span>
+						</a>
+						<ul>
+								<li>
+									<a href="admin/pnzDeps/index.html">
+										<span>部门管理</span>
+									</a>
+								</li>
+								<li>
+									<a href="admin/pnzAreas/index.html">
+										<span>区域管理</span>
+									</a>
+								</li>
+								<li>
+									<a href="admin/storehouss/index.html">
+										<span>线下门店</span>
+									</a>
+								</li>
+								<li>
+									<a href="admin/pnzOfflineShops/index.html">
+										<span>线上门店</span>
+									</a>
+								</li>
+						</ul>
+					</li>
+				<li class="has-sub">
+					<a href="#">
+						<div class="fs1" aria-hidden="true" data-icon=""></div>
+						<span>商品管理</span>
+					</a>
+					<ul>
+							<li>
+								<a href="admin/pnzCategorys/index.html">
+									<span>线上类别</span>
+								</a>
+							</li>
+							<li>
+							<a href="admin/goods/index.html">
+									<span>线下商品库</span>
+								</a>
+							</li>
+							<li>
+								<a href="admin/pnzGoods/index.html">
+									<span>线上商品</span>
+								</a>
+							</li>
+						<li>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a href="#">
+						<div class="fs1" aria-hidden="true" data-icon=""></div>
+						<span>活动管理</span>
+					</a>
+					<ul>
+						<li>
+							<a href="admin/pnzSchedules/index.html">
+								<span>档期管理</span>
+							</a>
+						</li>
+							<li>
+								<a href="admin/pnzOffers/index.html">
+									<span>特价商品管理</span>
+								</a>
+							</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a href="#">
+						<div class="fs1" aria-hidden="true" data-icon=""></div>
+						<span>会员管理</span>
+					</a>
+					<ul>
+						<li>
+							<a href="admin/members/index.html">
+								<span>会员管理</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a href="#">
+						<div class="fs1" aria-hidden="true" data-icon=""></div>
+						<span>订单管理</span>
+					</a>
+					<ul>
+						<li>
+							<a href="admin/pnzOrders/index.html">
+								<span>订单管理</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a href="#">
+						<div class="fs1" aria-hidden="true" data-icon=""></div>
+						<span>系统管理</span>
+					</a>
+					<ul>
+							<li>
+								<a href="admin/systemAccounts/index.html">
+									<span>账号管理</span>
+								</a>
+							</li>
+							<li>
+								<a href="admin/pnzFocuss/index.html">
+									<span>网站轮播图</span>
+								</a>
+							</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a href="#">
+						<div class="fs1 icon-social-stumbleupon" aria-hidden="true"></div>
+						<span>品农文章管理</span>
+					</a>
+					<ul>
+						<li>
+								<a href="admin/articles/1/GYWM/index.html">
+								<span>关于我们</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/1/FLZC/index.html">
+								<span>法律政策</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/1/LXWM/index.html">
+								<span>联系我们</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/1/ZPBZ/index.html">
+								<span>正品保证</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/1/GWZN/index.html">
+								<span>购物指南</span>
+							</a>
+						</li>
+						<li>
+								<a href="admin/articles/1/FYSM/index.html">
+								<span>费用说明</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/1/SMRZ/index.html">
+								<span>实名认证</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/1/QSSM/index.html">
+								<span>签收说明</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/1/YSSX/index.html">
+								<span>运输时效</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="has-sub">
+					<a href="#">
+						<div class="fs1 icon-social-stumbleupon" aria-hidden="true"></div>
+						<span>品质文章管理</span>
+					</a>
+					<ul>
+						<li>
+							<a href="admin/articles/2/GYWM/index.html">
+								<span>关于我们</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/2/FLZC/index.html">
+								<span>法律政策</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/2/LXWM/index.html">
+								<span>联系我们</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/2/ZPBZ/index.html">
+								<span>正品保证</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/2/GWZN/index.html">
+								<span>购物指南</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/2/FYSM/index.html">
+								<span>费用说明</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/2/SMRZ/index.html">
+								<span>实名认证</span>
+							</a>
+						</li>
+						<li>
+							<a href="admin/articles/2/QSSM/index.html">
+								<span>签收说明</span>
+							</a>
+						</li>
+						<li>
+								<a href="admin/articles/2/YSSX/index.html">
+								<span>运输时效</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+					<li class="has-sub">
+						<a href="#">
+							<div class="fs1 icon-social-stumbleupon" aria-hidden="true"></div>
+							<span>官方微信管理</span>
+						</a>
+						<ul>
+								<li>
+									<a href="admin/wxArticles/indexCompanyProfile/index.html">
+										<span>公司简介</span>
+									</a>
+								</li>
+								<li>
+									<a href="admin/wxArticles/indexContactUs/index.html">
+										<span>联系方式</span>
+									</a>
+								</li>
+								<li>
+									<a href="admin/wxArticles/index.html">
+										<span>海报发布</span>
+									</a>
+								</li>
+						</ul>
+					</li>
+			<li class="has-sub">
+				<a href="#">
+					<div class="fs1 icon-social-stumbleupon" aria-hidden="true"></div>
+					<span>报表管理</span>
+				</a>
+				<ul>
+					<li>
+							<a href="admin/saleReports/index/index.html">
+							<span>销售额统计</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- Menu End -->
+</aside>
+<!-- Left sidebar end -->
+<!-- Dashboard Wrapper Start -->
+<div class="dashboard-wrapper">
+	<!-- Header start -->
+<header>
+	<ul class="pull-left" id="left-nav">
+		<li >
+			<div class="logo-mob clearfix">
+				<h2>
+					<div class="fs1" aria-hidden="true" data-icon="&#xe0db;"></div>
+					<span>新鲜e客</span>
+				</h2>
+			</div>
+		</li>
+	</ul>
+	<div class="pull-right">
+		<ul id="mini-nav" class="clearfix">
+			<li class="list-box hidden-xs dropdown">
+				<a href="#" role="button" class="dropdown-toggle current-user" data-toggle="dropdown">
+					admin[管理员] <b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu sm fadeInUp animated">
+					<li class="dropdown-content">
+						<a href="admin/home/index.html" data-original-title="" title=""><i class="fa fa-user"></i> 个人资料</a>
+						<a href="admin/systemAccounts/index.html" data-original-title="" title=""><i class="fa fa-envelope-o"></i> 修改密码</a>
+						<a href="admin/logout/index.html" data-original-title="" title=""><i class="fa fa-power-off"></i> 退出登录</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</header>
+	<!-- Header ends -->
+	<!-- Right sidebar start -->
+	<!-- Right sidebar end -->
+	<!-- Main Container Start -->
+	<div class="main-container">
+		<!-- Top Bar Starts -->
+		<div class="top-bar clearfix">
+			
+	<div class="page-title">
+		<h4>
+			<div class="fs1" aria-hidden="true" data-icon="&#xe0ac;"></div>
+			机构管理 <a href="admin/storehouss/index.html" class="samll">线下门店</a>
+		</h4>
+	</div>
+
+		</div>
+		<!-- Top Bar Ends -->
+		<!-- Container fluid Starts -->
+		<div class="container-fluid">
+			<!-- Spacer starts -->
+			<div class="spacer-xs">
+				
+
+
+
+<div class="row no-gutter">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4>[线下门店]列表</h4>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<form id="searchable" class="    form-horizontal" action="#" method="post">
+						<div class="col-xs-3">
+							<input id="search.stohousename_like,stohousenumber_like" name="search.stohousename_like,stohousenumber_like" class="form-control" placeholder="搜索名称，编码" type="text" value=""/>
+						</div>
+						<div class="col-xs-2">
+							<select id="search.offlineShop.statusLine_eq" name="search.offlineShop.statusLine_eq" class="form-control chosen-select" data-placeholder="上架状态"><option value=""></option><option value="NORMAL">上架</option><option value="DISABELD">下架</option></select>
+						</div>
+						<div class="col-xs-3">
+							<button type="submit" class="btn btn-sm btn-success">
+								查询
+								<span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+							</button>
+						</div>
+					</form>
+				</div>
+				<br />
+				<table class="table table-bordered table-hover">
+					<tr>
+                        <td>编号</td>
+                        <td>门店名称</td>
+                        <td>联系人</td>
+                        <td>联系电话</td>
+                        <td>传真</td>
+                        <td>手机</td>
+                        <td>地址</td>
+                        <td>状态</td>
+                        <td>备注</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr>
+                        <td>1108001</td>
+                        <td>品质玉桥西路1号店</td>
+                        <td>孟东杰</td>
+                        <td>13552466286</td>
+                        <td></td>
+                        <td>81521074</td>
+                        <td>通州区玉桥西路21号</td>
+                        <td>
+								<span class="label label-info">已编辑</span>
+								<br/><br/>
+									<span class="label label-success"> 上架</span>
+						</td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-primary"
+                                    href="admin/storehouss/9.html">查看</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1108002</td>
+                        <td>品质车站路3号店</td>
+                        <td>张燕青</td>
+                        <td>1365201176</td>
+                        <td></td>
+                        <td>81565683</td>
+                        <td>通州区车站路15号</td>
+                        <td>
+								<span class="label label-info">已编辑</span>
+								<br/><br/>
+									<span class="label label-success"> 上架</span>
+						</td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-primary"
+                                    href="admin/storehouss/9.html">查看</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1108003</td>
+                        <td>品质玉带河4号店</td>
+                        <td>刘红艳</td>
+                        <td>13661132965</td>
+                        <td></td>
+                        <td>69541359</td>
+                        <td>通州区玉带河西大街147号</td>
+                        <td>
+								<span class="label label-info">已编辑</span>
+								<br/><br/>
+									<span class="label label-success"> 上架</span>
+						</td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-primary"
+                                    href="admin/storehouss/9.html">查看</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1108004</td>
+                        <td>品质新城南关潞河店</td>
+                        <td>黎永新</td>
+                        <td>13521628299</td>
+                        <td></td>
+                        <td>69552351</td>
+                        <td>通州区新城南关156号</td>
+                        <td>
+								<span class="label label-info">已编辑</span>
+								<br/><br/>
+									<span class="label label-success"> 上架</span>
+						</td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-primary"
+                                    href="admin/storehouss/9.html">查看</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1108005</td>
+                        <td>品质西大街店</td>
+                        <td>杨海鹏</td>
+                        <td>13521643737</td>
+                        <td></td>
+                        <td>63556334</td>
+                        <td>通州区西大街甲70号</td>
+                        <td>
+								<span class="label label-info">已编辑</span>
+								<br/><br/>
+									<span class="label label-success"> 上架</span>
+						</td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-primary"
+                                    href="admin/storehouss/9.html">查看</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1108006</td>
+                        <td>品质北苑店</td>
+                        <td>王淑霞</td>
+                        <td>13683092938</td>
+                        <td></td>
+                        <td>63553656</td>
+                        <td>通州区北苑129号</td>
+                        <td>
+								<span class="label label-info">已编辑</span>
+								<br/><br/>
+									<span class="label label-success"> 上架</span>
+						</td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-primary"
+                                    href="admin/storehouss/9.html">查看</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1108007</td>
+                        <td>品质新城东里店</td>
+                        <td>李春红</td>
+                        <td>13911373240</td>
+                        <td></td>
+                        <td>80887331</td>
+                        <td>通州区新城东里7号楼</td>
+                        <td>
+								<span class="label label-info">已编辑</span>
+								<br/><br/>
+									<span class="label label-danger"> 下架</span>
+						</td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-primary"
+                                    href="admin/storehouss/9.html">查看</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1108008</td>
+                        <td>品质九棵树店</td>
+                        <td>常建</td>
+                        <td>13911324092</td>
+                        <td></td>
+                        <td>81512035</td>
+                        <td>通州区九棵树10号</td>
+                        <td>
+								<span class="label label-info">已编辑</span>
+								<br/><br/>
+									<span class="label label-success"> 上架</span>
+						</td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-primary"
+                                    href="admin/storehouss/9.html">查看</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1108009</td>
+                        <td>品质新华东街东升店</td>
+                        <td>刘光利</td>
+                        <td>13717501453</td>
+                        <td></td>
+                        <td>69543987</td>
+                        <td>通州区新华东街32号</td>
+                        <td>
+								<span class="label label-info">已编辑</span>
+								<br/><br/>
+									<span class="label label-success"> 上架</span>
+						</td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-primary"
+                                    href="admin/storehouss/9.html">查看</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1108010</td>
+                        <td>品质乔庄北街玉桥店</td>
+                        <td>丁大庆</td>
+                        <td>13520635179</td>
+                        <td></td>
+                        <td></td>
+                        <td>通州区乔庄北街1号院611号</td>
+                        <td>
+								<span class="label label-info">已编辑</span>
+								<br/><br/>
+									<span class="label label-success"> 上架</span>
+						</td>
+                        <td></td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-sm btn-primary"
+                                    href="admin/storehouss/9.html">查看</a>
+                            </div>
+                        </td>
+                    </tr>
+				</table>
+				<div>
+					<ul class="pagination pull-right"><li><a href="/management/storehouss?page.pn=1&page.size=10">首页</a></li><li class="disabled"><a><i class='ace-icon fa fa-angle-double-left'></i></a></li><li class="active"><a>1</a></li><li><a href="/management/storehouss?page.pn=2&page.size=10">2</a></li><li><a href="/management/storehouss?page.pn=3&page.size=10">3</a></li><li><a href="/management/storehouss?page.pn=4&page.size=10">4</a></li><li><a href="/management/storehouss?page.pn=5&page.size=10">5</a></li><li><a href="/management/storehouss?page.pn=2&page.size=10"><i class='ace-icon fa fa-angle-double-right'></i></a></li><li><a href="/management/storehouss?page.pn=5&page.size=10">尾页</a></li><li><span class='label label-danger'>共50条</span></li><li disabled="true"><span class='label label-danger'>第1/5页</span></li></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+			</div>
+			<!-- Spacer ends -->
+		</div>
+		<!-- Container fluid ends -->
+	</div>
+	<!-- Main Container Start -->
+	<!-- Footer Start -->
+	<footer>
+		Copyright <strong><span>2016-2020</span></strong> . All Rights Reserved.
+	</footer>
+	<!-- Footer end -->
+</div>
+<!-- Dashboard Wrapper End -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="assets/lib/js/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="assets/lib/js/bootstrap.min.js"></script>
+<!-- Animated Right Sidebar -->
+<script src="assets/lib/js/slidebars.js"></script>
+<script src="assets/lib/js/toastr.min.js"></script>
+<!-- Date time select -->
+<script src="assets/lib/js/moment.min.js"></script>
+<script src="assets/lib/js/moment.zh-cn.js"></script>
+<script src="assets/lib/js/bootstrap-datetimepicker.min.js"></script>
+<script src="assets/lib/js/chosen.jquery.min.js"></script>
+<!-- Custom JS -->
+<script src="assets/lib/js/custom.js"></script>
+<script type="text/javascript">
+	jQuery.ctx = ""; //在js中可以直接通过$.ctx来获取应用程序上下文
+	jQuery.servletPath = "/management/storehouss";//在js中可以直接通过$.servletPath 来获取请求的路径
+</script>
+<script type="text/javascript" src="assets/app/js/management/application.js"></script>
+
+ <script type="text/javascript" src="/assets/app/js/management/storehouss.js"></script>
+
+<div id="modal-ajax" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content"></div>
+	</div>
+</div>
+</body>
+</html>
+ </body>
+</html>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+		http://www.springframework.org/schema/cache
+		http://www.springframework.org/schema/cache/spring-cache-4.3.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+    <context:component-scan base-package="com.senchen365.eshop">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+
+
+    <!--1.加载db.properties文件-->
+    <context:property-placeholder location="classpath:db.properties"/>
+    <bean id="myDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close"
+          p:driverClassName="${jdbc.driver}"
+          p:url="${jdbc.url}"
+          p:username="${jdbc.user}"
+          p:password="${jdbc.pwd}"
+
+          p:filters="stat"
+          p:initialSize="10"
+          p:maxActive="100"
+          p:minIdle="2"
+          p:maxWait="60000"
+
+          p:timeBetweenEvictionRunsMillis="60000"
+          p:minEvictableIdleTimeMillis="300000"
+
+          p:testWhileIdle="true"
+          p:testOnBorrow="false"
+          p:testOnReturn="false"
+
+          p:poolPreparedStatements="true"
+          p:maxOpenPreparedStatements="20"
+    />
+    <!--上面依次是监控拦截，初始化大小，最大活动数，最小空闲数，最大等待时间-->
+    <!--timeBetweenEvictionRunsMillis每隔多久进行一次检测，检测需要关闭的空闲连接-->
+    <!--minEvictableIdleTimeMillis是一个连接在池中最小生存时间-->
+    <!--以test开头的是测试用的-->
+
+    <!--最后的两个是 打开PreparedStatementCache，并且指定每个连接上PSCache的大小-->
+
+
+    <!--spring 集成 mybatis-->
+    <!--1.sqlSessionFactory工厂类-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:mybatis-core.xml"/>
+        <property name="mapperLocations" value="classpath*:mapper/*.xml"/>
+        <property name="dataSource" ref="myDataSource"/>
+
+    </bean>
+
+    <!--2.让dao与mybatis映射文件关联-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.senchen365.eshop.dao"/>
+    </bean>
+    <!--3.sqlSession的配置，相当于jdbcTempLate-->
+    <bean id="sessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg ref="sqlSessionFactory" name="sqlSessionFactory"/>
+        <constructor-arg value="BATCH" name="executorType"/>
+    </bean>
+
+
+
+    <!--事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <!--1.事物的传播行为-->
+    <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="query*" read-only="true"/>
+            <tx:method name="check*" isolation="DEFAULT" propagation="REQUIRED" rollback-for="java.sql.SQLException"/>
+            <tx:method name="update*" isolation="DEFAULT" propagation="REQUIRED" rollback-for="java.sql.SQLException"/>
+            <tx:method name="delete*" isolation="DEFAULT" propagation="REQUIRED" rollback-for="java.sql.SQLException"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!--利用aop将事务切面插入到指定的业务包-->
+    <aop:config>
+        <aop:pointcut id="zpointcut" expression="execution(* com.senchen365.eshop.service.*.*(..))"/>
+        <aop:advisor advice-ref="transactionAdvice" pointcut-ref="zpointcut"/>
+    </aop:config>
+
+    <!--设置ehcache缓存-->
+    <bean id="cacheFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:ehcache.xml"/>
+    </bean>
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+        <property name="cacheManager" ref="cacheFactory"/>
+    </bean>
+    <cache:annotation-driven cache-manager="cacheManager"/>
+</beans>

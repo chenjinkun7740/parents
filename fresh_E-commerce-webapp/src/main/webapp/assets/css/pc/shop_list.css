@@ -1,0 +1,71 @@
+
+/*搜索条件筛选*/
+.searchCon{
+    background-color: #ffffff;
+    padding: 0 10px 10px 10px;
+}
+.searchCon .splitCon{
+    padding: 10px;
+    line-height: 30px;
+    border-bottom: 1px dashed #E2F0C7;
+}
+.searchCon .splitCon .lc{
+    float:left;
+    width:100px;
+    text-align: right;
+    color:#019040;
+}
+.searchCon .splitCon .rc{
+    padding-left:120px;
+}
+.searchCon .splitCon .rc a{
+    padding: 5px 10px;
+    margin-right:15px;
+}
+.searchCon .splitCon .rc a.cur{
+    background-color: #019040;
+    color:#ffffff;
+}
+
+
+/*分店列表*/
+ul.shopUL {
+}
+ul.shopUL li{
+    float: left;
+    width: 228px;
+    height: 265px;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    margin: 0 12px 10px 0;
+    background-color: #ffffff;
+}
+ul.shopUL li:hover{
+    border: 1px solid #85c125;
+}
+ul.shopUL li.trLast{
+    margin-right:0;
+}
+ul.shopUL img{
+    border: 0;
+    width: 205px;
+    height: 165px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+ul.shopUL .title{
+    text-align: left;
+    font-size: 16px;
+    height: 25px;
+    overflow: hidden;
+    display: inline-block;
+    color:#333333;
+}
+ul.shopUL .desc{
+    color: #939393;
+    height:20px;
+    line-height:20px;
+    text-align: left;
+    display: inline-block;
+}

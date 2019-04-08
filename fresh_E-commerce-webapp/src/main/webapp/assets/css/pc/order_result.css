@@ -1,0 +1,23 @@
+
+
+
+
+.orderResultTb{
+    width:60%;
+    margin:50px auto;
+    font-size:16px;
+}
+.orderResultTb .rd{
+    padding:15px;
+    line-height: 35px;
+}
+.orderNo{
+    font-weight:bold;
+    color:#ff0000;
+    font-size: 16px;
+}
+.orderMoney{
+    font-weight:bold;
+    color:#008800;
+    font-size: 16px;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.senchen365.eshop.dao.SystemAccountDao">
+
+    <!--1.根据账户查询是否被锁定-->
+    <select id="checkLocked" parameterType="String" resultType="java.lang.Boolean">
+        select locked from system_accounts where account=#{user}
+    </select>
+
+    <!--2.根据账号和密码查询用户-->
+
+    <!--#
+        查询角色    select * from system_roles where ID in
+        (select SYSTEM_ROLE_ID from system_account_roles where SYSTEM_Account_ID=3)
+-->
+    <!--3.查询角色对应的权限-->
+    <select id="selectPermission" resultType="systemPermission" parameterType="int">
+        select * from system_permissions where ID in
+        (select system_permission_id from system_role_permissions where SYSTEM_role_ID=#{roleId})
+    </select>
+    <resultMap id="selectPermissionMap" type="systemRole">
+        <collection property="permissionList" ofType="systemPermission" column="id" select="selectPermission"/>
+    </resultMap>
+    <!--2.查询用户的所有的角色-->
+    <select id="selectRole" parameterType="int" resultMap="selectPermissionMap">
+        select * from system_roles where ID in
+        (select SYSTEM_ROLE_ID from system_account_roles where SYSTEM_Account_ID=#{accountId})
+    </select>
+
+    <resultMap id="systemRoleMap" type="systemAccounts">
+        <collection property="systemRole" select="selectRole" ofType="systemRole" column="id"/>
+    </resultMap>
+    <!--1.返回systemAccounts-->
+    <select id="queryMsgByPwdAndAccount" parameterType="hashmap" resultMap="systemRoleMap">
+        select * from system_accounts where account=#{user} and password_digist=#{mypwd}
+        and status=1 and locked=0 and is_deleted=0
+    </select>
+
+
+
+
+
+
+    <!--3.根据账号查询盐值-->
+    <select id="querySaltByAccount" parameterType="String" resultType="String">
+        select salt from system_accounts where account=#{cc} and status=1 and locked=0 and is_deleted=0
+    </select>
+    <!--4.设置锁定-->
+    <update id="setLocked" parameterType="String">
+        UPDATE system_accounts SET locked=1 where account=#{myaccount}
+    </update>
+</mapper>

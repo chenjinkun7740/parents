@@ -1,0 +1,26 @@
+
+
+.green-bg{
+    background-color:#739840 !important;
+    padding:50px 0;
+}
+.login-box{float: right; width:378px; background-color: #fff; padding:20px; margin:100px  80px 100px 20px; overflow: hidden;}
+.login-title{
+    padding:10px 0 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #3c3c3c;
+}
+.input-group {margin-bottom:25px !important;}
+.input-lg{font-size:14px;}
+.btn-lg, .btn-group-lg > .btn{font-size:16px;}
+.link p{margin-top:10px;}
+
+.form-group {
+    margin-bottom: 0;
+}
+.errorTip{height:35px; line-height: 35px; color:#ff0000; padding-left:15px;}
+
+
+
+

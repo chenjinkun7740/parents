@@ -1,0 +1,133 @@
+
+/*璁㈠崟娴佺▼鍥炬爣*/
+.orderpath-outline,.orderpath-online{
+    padding: 15px 0;
+}
+.orderpath-outline .on,.orderpath-online .on{
+    width:396px; height:27px; background:url(http://www.ttlsgs.com/assets/img/pc/orderpath.png) no-repeat; margin:0 auto;
+}
+.orderpath-outlline .on1{background-position: 0 0;}
+.orderpath-outlline .on2{background-position: 0 -29px;}
+.orderpath-outlline .on3{background-position: 0 -59px;}
+
+.orderpath-online .on{width:586px; }
+.orderpath-online .on1{background-position: 0 -89px;}
+.orderpath-online .on2{background-position: 0 -119px;}
+.orderpath-online .on3{background-position: 0 -150px;}
+.orderpath-online .on4{background-position: 0 -178px;}
+.protxt{line-height: 24px; white-space: nowrap; text-align: center;}
+.protxt .span1{ position: relative; left:-202px;}
+.protxt .span2{ position: relative; left:-73px;}
+.protxt .span3{ position: relative; left:58px;}
+.protxt .span4{ position: relative; left:190px;}
+
+
+/*琛ㄦ牸*/
+.order-header{
+    padding:15px;
+    /*background-color: #F1F1F1;
+    margin:5px;*/
+    border-top: 2px solid #B8DBB7;
+}
+.order-header h3{padding:10px; border-left: #6d9e0c 3px solid;}
+.cart-table-th,.order-content{}
+.cart-table-th,.cart-table-td{clear:both;vertical-align: middle; padding:10px; background-color: #fff; overflow: hidden;}
+.cart-table-th{
+    padding:15px 10px;
+    font-weight: bold;
+}
+.cart-table-td{border-bottom:#dfdfdf 1px dashed; }
+.check{margin-right: 5px; vertical-align: top}
+.tab-mod{width:100%; overflow:auto;}
+.tab-mod .th,.tab-mod .td{float: left;}
+.tab-mod .th{
+    background-color: #ebebeb;
+    border-bottom: #dfdfdf 1px solid;
+}
+.tab-mod .title .td{background-color: #f5f5f5;border-bottom: #dfdfdf 1px solid}
+.tab-mod th,.tab-mod td,.tab-mod .th,.tab-mod .td{padding:8px 10px;}
+.tab-mod tr,.tab-mod .tr{border-bottom: #dfdfdf 1px solid; overflow: auto}
+.tab-mod .tr{clear:both;}
+.tab-mod tr:nth-child(odd){background-color: #f9f9f9;}
+.tab-mod .tr:nth-child(even){overflow: auto; background-color: #f9f9f9;}
+.tab-mod tr.hd,.tab-mod .tr.hd{
+    border-top: #6d9e0c 2px solid;
+    color: #6d9e0c;
+    background-color: #e9e9e9;}
+.tab-mod tr.bd:hover,.tab-mod .tr.bd:hover{background-color: #f2f2f2}
+.tab-mod tr.bd td.act-control a,.tab-mod .tr.bd .act-control a{display: inline-block; padding: 0 8px;}
+.tab-mod tr.bd .photo img,.tab-mod .tr.bd .photo img{width:98px; height:68px; margin-right:10px; margin-top:5px; overflow:hidden}
+
+/*寰芥爣*/
+.arrow-left,.arrow-right{
+    position: absolute;
+    height: 20px;
+    background-color: #f46240;
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 20px;
+}
+.arrow-left:after , .arrow-right:after{
+    content: '';
+    position: absolute;
+    top: 4px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+}
+.arrow-left{
+    margin-left:8px;
+    padding: 0 4px 4px 3px;
+}
+.arrow-left:after{
+    left: -7px;
+    border-right: 7px solid #f46240;
+    border-top: 7px solid transparent;
+    border-bottom: 7px dashed transparent;
+}
+.arrow-right{margin-right:8px;  padding: 0 4px 4px 3px;}
+.arrow-right:after{right: -7px;
+    border-left: 7px solid #f46240;
+    border-top: 7px solid transparent;
+    border-bottom: 7px dashed transparent;}
+
+/*璐墿杞﹀晢鍝佸垪琛�*/
+.th-chk{
+    margin-right:15px;
+}
+.th-chk img{
+    width:60px;
+    height:60px;
+    border:0;
+}
+.shopName{color:#f46240; font-weight: bold;}
+
+
+/*checkbox*/
+.m-checkbox{
+   /* width:30px !important;
+    height:30px !important;
+    border:1px solid #c5c5c5 !important;*/
+}
+
+/*input-count*/
+.m-input-count{
+    width:75px !important;
+
+}
+
+/*鍚堣缁撶畻*/
+.order-con{
+    padding:15px !important;
+}
+
+.order-con .num {
+    color: #f40;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 48px;
+    font-family: Arial;
+    vertical-align: middle;
+}

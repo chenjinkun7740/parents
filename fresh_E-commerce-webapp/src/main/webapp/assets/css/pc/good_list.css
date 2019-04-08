@@ -1,0 +1,44 @@
+
+ul.listUl {
+
+}
+ul.listUl li{
+    float: left;
+    width: 228px;
+    height: 265px;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    margin: 0 12px 10px 0;
+    background-color: #ffffff;
+}
+ul.listUl li:hover{
+    border: 1px solid #85c125;
+}
+ul.listUl li.trLast{
+    margin-right:0;
+}
+ul.listUl img{
+    border: 0;
+    width: 205px;
+    height: 165px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+ul.listUl .title{
+    text-align: left;
+    font-size: 16px;
+    height: 25px;
+    overflow: hidden;
+    display: inline-block;
+    color:#333333;
+}
+ul.listUl .price{
+    color: #b51d1a;
+    font-size: 16px;
+    height:20px;
+    line-height:20px;
+    text-align: left;
+    display: inline-block;
+}
+
